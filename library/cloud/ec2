@@ -412,7 +412,7 @@ def create_instances(module, ec2):
                       'instance_profile_name': instance_profile_name}
 
             if vpc_subnet_id:
-                params['security_group_ids'] = group_id
+                params['security_group_ids'] = [group_id]
             else:
                 params['security_groups'] = group_name
 
